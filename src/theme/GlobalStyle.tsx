@@ -49,7 +49,13 @@ export function GlobalStyle() {
           height: "667px",
           paddingTop: 20,
           overflowY: "auto",
+          overflowX: "hidden",
+          position: "relative",
         },
+        ".mantine-TextInput-label": {
+          fontSize: 14,
+        },
+  
       })}
     />
   );

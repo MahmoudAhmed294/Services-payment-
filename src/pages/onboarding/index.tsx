@@ -6,7 +6,7 @@ import IntroducedScreen from "./IntroducedScreen";
 import screen1 from "../../assets/screen1.svg";
 import screen2 from "../../assets/screen2.svg";
 import screen3 from "../../assets/screen3.svg";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 type Props = {};
@@ -24,7 +24,12 @@ const Index = (props: Props) => {
       >
         <Group position="right">
           {NextPage !== 2 && (
-            <Button variant="subtle" size="xs" color="gray.5">
+            <Button
+              variant="subtle"
+              size="xs"
+              color="gray.5"
+              onClick={() => setNextPage(2)}
+            >
               Skip
             </Button>
           )}

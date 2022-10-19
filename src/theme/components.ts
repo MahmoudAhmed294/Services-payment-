@@ -2,7 +2,8 @@ export const Components: any = {
   Button: {
     defaultProps: {
       size: "lg",
-      variant:"filled"
+      variant: "filled",
+      fullWidth: true,
     },
   },
   TextInput: {
@@ -13,6 +14,11 @@ export const Components: any = {
   Text: {
     defaultProps: {
       size: "sm",
+    },
+  },
+  PasswordInput: {
+    defaultProps: {
+      size: "lg",
     },
   },
 };

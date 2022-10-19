@@ -19,7 +19,7 @@ const myTheme: MantineThemeOverride = {
       "#C4C4C4",
       "#707070",
       "#343434",
-      "#2B2B2B",
+      "#363636",
       "#242424",
       "#2E2E2E",
       "#1E1E1E",
@@ -50,11 +50,11 @@ const myTheme: MantineThemeOverride = {
   defaultRadius: "xs",
 
   fontSizes: {
-    xs: 12,
+    xs: 14,
     sm: 16,
     md: 18,
     lg: 20,
-    xl: 24,
+    xl: 22,
   },
   loader: "bars",
 
