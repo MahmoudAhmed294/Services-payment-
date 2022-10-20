@@ -18,7 +18,7 @@ type Props = {};
 const Login = (props: Props) => {
   const navigate = useNavigate();
   return (
-    <AnimatedComponents>
+    <AnimatedComponents noHeader>
       <Stack justify="space-between">
         <div>
           <Group position="apart" align="center">
@@ -39,7 +39,7 @@ const Login = (props: Props) => {
           </Stack>
         </div>
 
-        <Box component="form" sx={{ minHeight: "55vh" }}>
+        <Box component="form" sx={{ minHeight: "50vh" }}>
           <Stack spacing={24}>
             <TextInput
               placeholder="Enter your username or Email"

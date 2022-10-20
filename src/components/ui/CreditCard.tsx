@@ -7,9 +7,9 @@ import {
   Image,
   Text,
 } from "@mantine/core";
-import payM1 from "../../../assets/payM1.png";
-import payM2 from "../../../assets/payM2.png";
-import payM3 from "../../../assets/payM3.png";
+import payM1 from "../../assets/payM1.png";
+import payM2 from "../../assets/payM2.png";
+import payM3 from "../../assets/payM3.png";
 
 type Props = {
   cardNumber: string;

@@ -13,9 +13,11 @@ import { BsFillBellFill } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
-type Props = {};
+type Props = {
+  headerTitle?: string;
+};
 
-const Header = (props: Props) => {
+const Header = ({ headerTitle }: Props) => {
   const IsHome = useLocation().pathname === "/home";
   const pageName = useLocation()
     .pathname.split("/")[1]
@@ -25,7 +27,7 @@ const Header = (props: Props) => {
 
   const navigate = useNavigate();
   useLayoutEffect(() => {
-    document.title = pageName;
+    document.title = headerTitle ? headerTitle : pageName;
   }, [pageName]);
 
   return (
@@ -44,7 +46,7 @@ const Header = (props: Props) => {
           <MdKeyboardArrowLeft size={24} />
         </ActionIcon>
       )}
-      {!IsHome && <Title order={5}>{pageName}</Title>}
+      {!IsHome && <Title order={5}>{headerTitle ? headerTitle : pageName}</Title>}
       <Group position="right">
         <Indicator dot inline size={12} color="red" withBorder>
           <ActionIcon variant="filled">

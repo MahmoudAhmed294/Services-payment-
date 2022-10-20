@@ -7,9 +7,10 @@ type Props = {
   children: React.ReactNode;
   noHeader?: boolean;
   noContainer?: boolean;
+  headerTitle?: string;
 };
 
-const AnimatedComponents = ({ children, noHeader, noContainer }: Props) => {
+const AnimatedComponents = ({ children, noHeader, noContainer ,headerTitle }: Props) => {
 
   return (
     <motion.div
@@ -20,7 +21,7 @@ const AnimatedComponents = ({ children, noHeader, noContainer }: Props) => {
       <>
         {!noHeader && (
           <Container  sx={{ height: "100%" }}>
-            <Header />
+            <Header headerTitle={headerTitle} />
           </Container>
         )}
 

@@ -16,7 +16,7 @@ const Index = (props: Props) => {
   const navigate = useNavigate();
 
   return (
-    <AnimatedComponents>
+    <AnimatedComponents noHeader>
       <Stack
         justify={NextPage !== 2 ? "space-between" : "flex-start"}
         sx={{ height: "100%" }}
@@ -29,6 +29,7 @@ const Index = (props: Props) => {
               size="xs"
               color="gray.5"
               onClick={() => setNextPage(2)}
+              fullWidth={false}
             >
               Skip
             </Button>

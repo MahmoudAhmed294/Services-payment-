@@ -23,7 +23,7 @@ const PhoneVerification = (props: Props) => {
     setOtpValue(value);
   };
   return (
-    <AnimatedComponents>
+    <AnimatedComponents noHeader>
       <Stack justify="space-between">
         <div>
           <Group position="apart" align="center">
@@ -70,7 +70,7 @@ const PhoneVerification = (props: Props) => {
                 }}
               />
             </Group>
-            <Button onClick={()=>navigate('/home')}>Continue</Button>
+            <Button onClick={() => navigate("/home")}>Continue</Button>
           </Stack>
         </Box>
         <Group spacing={3} align="center" position="center" mb={16}>

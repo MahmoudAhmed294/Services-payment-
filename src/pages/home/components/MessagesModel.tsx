@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Affix, Box, ActionIcon, Menu, createStyles } from "@mantine/core";
+import { Affix, ActionIcon, Menu, createStyles } from "@mantine/core";
 import { MdMessage, BsPencilSquare, RiDeleteBack2Fill } from "react-icons/all";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
@@ -23,7 +24,7 @@ const useStyles = createStyles((theme) => ({
 const Messages = (props: Props) => {
   const { classes } = useStyles();
   const [opened, setOpened] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <Affix position={{ bottom: 100, right: 20 }}>
       <Menu
@@ -53,8 +54,14 @@ const Messages = (props: Props) => {
             border: 0,
           }}
         >
-          <Menu.Item icon={<MdMessage size={24} />}></Menu.Item>
-          <Menu.Item icon={<BsPencilSquare size={24} />}></Menu.Item>
+          <Menu.Item
+            icon={<MdMessage size={24} />}
+            onClick={() => navigate("/chat")}
+          ></Menu.Item>
+          <Menu.Item
+            icon={<BsPencilSquare size={24} />}
+            onClick={() => navigate("/messageCenter")}
+          ></Menu.Item>
           <Menu.Item
             onClick={() => setOpened(false)}
             icon={<RiDeleteBack2Fill size={24} />}

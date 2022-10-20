@@ -16,7 +16,7 @@ import BoxesContainer from "./components/BoxesContainer";
 import { myFlats, OurServices } from "../../data";
 import Footer from "../../components/ui/Footer";
 import OurSponsor from "./components/OurSponsor";
-import Messages from "./components/Messages";
+import Messages from "./components/MessagesModel";
 import TotalBalance from "../../components/ui/TotalBalance";
 
 type Props = {};

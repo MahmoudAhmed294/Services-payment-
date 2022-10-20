@@ -21,7 +21,7 @@ const Register = (props: Props) => {
   const navigate = useNavigate();
 
   return (
-    <AnimatedComponents>
+    <AnimatedComponents noHeader>
       <Stack justify="space-between" >
         <div>
           <Group position="apart" align="center">
@@ -42,7 +42,7 @@ const Register = (props: Props) => {
           </Stack>
         </div>
 
-        <Box component="form" sx={{ minHeight: "55vh" }} mb={8}>
+        <Box component="form" sx={{ minHeight: "50vh" }} mb={8}>
           <Stack spacing={24}>
             <TextInput placeholder="Full name" type="string" />
             <TextInput

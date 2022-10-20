@@ -13,6 +13,13 @@ import Payment from "../../pages/payment";
 import AddNewCard from "../../pages/addNewCard";
 import Bill from "../../pages/Bill";
 import PayAll from "../../pages/payAll";
+import MyCreditCard from "../../pages/myCreditCard";
+import MessageCenter from "../../pages/MessageCenter";
+import Chat from "../../pages/chat";
+import PaymentHistory from "../../pages/paymentHistory";
+import Profile from "../../pages/profile";
+import EditPersonalInfo from "../../pages/editPersonalInfo";
+import ChangeLanguage from "../../pages/changeLanguage";
 
 type Props = {};
 
@@ -27,6 +34,7 @@ const AnimatedRoute = (props: Props) => {
         <Route path="/register" element={<Register />} />
         <Route path="/phoneVer" element={<PhoneVerification />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/myCreditCard" element={<MyCreditCard />} />
         <Route path="/billService" element={<ServiceBill />}>
           <Route index element={<BillDetails />} />
           <Route path="billType" element={<AmountToPayBill />} />
@@ -35,6 +43,12 @@ const AnimatedRoute = (props: Props) => {
         <Route path="/addNewCard" element={<AddNewCard />} />
         <Route path="/confirmPayment" element={<Bill />} />
         <Route path="/payAll" element={<PayAll />} />
+        <Route path="/messageCenter" element={<MessageCenter />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/paymentHistory" element={<PaymentHistory />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/editPersonalInfo" element={<EditPersonalInfo />} />
+        <Route path="/language" element={<ChangeLanguage />} />
       </Routes>
     </AnimatePresence>
   );
